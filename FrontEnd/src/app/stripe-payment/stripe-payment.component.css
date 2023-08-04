@@ -1,0 +1,32 @@
+.container
+{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+input,select{
+    width:500px;
+    background-color: #BF9742;
+}
+label
+{
+    color: #61481C;
+    font-family: cursive;
+    font-weight: bold;
+}
+.btn
+{
+    margin-top: 10px;
+    background-color: #61481C;
+    color: whitesmoke;
+   
+}
+h2{
+    color: #61481C;
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+}
+.error{
+    color: red;
+}

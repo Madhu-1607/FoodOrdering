@@ -1,0 +1,108 @@
+/* Footer */
+body {
+	background: linear-gradient(-45deg, #D0B8A8, #DFD3C3, #F8EDE3);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 230vh;
+  background-position: cover;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+ 
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 0;
+  
+}
+
+
+/* Navbar styles */
+.navbar {
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #9E7540;
+  color: #ffffff;
+}
+
+/* Container styles */
+.container {
+  margin-top: 20px;
+}
+.container {
+  margin-top: 50px; /* Adjust the margin-top value based on your navbar height */
+  margin-bottom: 50px; /* Adjust the margin-bottom value based on your footer height */
+  padding-bottom: 30px;
+  background-size: cover;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #F67280;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: cursive;
+}
+
+.navbar-nav .nav-link {
+  color: whitesmoke;
+}
+
+.navbar-nav .nav-link:hover {
+  color: black;
+}
+
+/* Footer styles */
+.footer {
+  background-color:#9E7540;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Container styles */
+@media (max-width: 575.98px) {
+  .container {
+    margin-top: 60px; /* Adjust the margin-top value for small screens */
+  }
+}
+.btn{
+  background-color: #A47E3B;
+  color: whitesmoke;
+}

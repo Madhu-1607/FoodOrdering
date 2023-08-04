@@ -1,0 +1,68 @@
+/* style.css */
+
+.g{
+  /* padding-left: 400px; */
+  padding-top: 50px;
+  }
+  /* Center the form on the page */
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 70px;
+  }
+  
+  /* Add spacing between form elements */
+  .container .form-group {
+    margin-bottom: 20px;
+  }
+  /* {
+    width: 50%;
+    align-content: center;
+  } */
+  /* Style the submit button */
+  .container .btn {
+    width: 200px;
+    margin-top: 10px;
+  }
+  
+  /* Add margin to the alert message */
+  .alert {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the heading */
+  h2 {
+    margin-bottom: 30px;
+    color: #61481C;
+    font-family:cursive;font-weight:bold
+  }
+  
+  /* Style the label */
+  label {
+    font-weight: bold;
+    color: #61481C;
+    font-family: cursive;
+  }
+  
+  /* Add spacing to the input fields */
+  input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 400px;height:40px;border-radius:20px; background-color:#BF9742;
+    border-color: #61481C;
+  }
+  .btn{
+    background-color: #BF9742;
+    border-radius: 20px;
+    color: #61481C;
+    border-color: #61481C;
+    font-family: cursive;
+    font-weight: bold;
+  }
+  .btn:hover
+  {
+    background-color: #61481C;
+  }
+  

@@ -1,0 +1,61 @@
+/* Custom CSS for About Section */
+.about {
+  padding: 80px 0;
+
+}
+.container
+{
+  height: 400px;
+}
+.about h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #61481C;
+  margin-bottom: 30px;
+  font-family: cursive;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #61481C;
+  margin-bottom: 20px;
+}
+
+.about img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.de
+{
+  font-size: 20px;
+  font-family:cursive;
+  font-weight: bold;
+  color: #61481C;
+  
+}
+td
+{
+  padding: 20px;
+}
+.r{
+  font-family:cursive;
+  color: #61481C;
+}
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+}

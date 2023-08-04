@@ -1,0 +1,28 @@
+.container {
+  padding: 20px;
+  background-color: #A47E3B;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 70px;
+  color: whitesmoke;
+  font-family: cursive;
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.loading-message {
+  font-style: italic;
+  color: #777;
+}
