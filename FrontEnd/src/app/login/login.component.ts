@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 
 interface Restaurant {
   _id: string;
@@ -73,7 +73,25 @@ export class LoginComponent {
 
         this.authService.setUserId(this.userId);
 
-        alert(`Welcome to HungryHub ${this.username}!`);
+        // alert(`Welcome to HungryHub ${this.username}!`);
+        const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">Hello Foodie!</span>',
+  html: '<span style="color:whitesmoke;">Login Successfull</span>',
+  icon: 'success',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        }),
         // location.href = "/";
         this.router.navigate(['/']);
 
@@ -81,7 +99,25 @@ export class LoginComponent {
       (error) => {
         this.router.navigate(['/login']);
         console.log(error);
-        alert('Invalid Username or Password or Usertype Failed!');
+        // alert('Invalid Username or Password or Usertype Failed!');
+        const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">Oops!</span>',
+  html: '<span style="color:whitesmoke;">Invalid login credentials</span>',
+  icon: 'error',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        })
       }
     );
   }
