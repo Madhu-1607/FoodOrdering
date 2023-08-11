@@ -5,7 +5,7 @@ import { MenuItem } from '../MenuItem';
 import { User } from '../User';
 import { CartItem } from '../Cart';
 import { CartService } from '../cart.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-menuitems',
   templateUrl: './menuitems.component.html',
@@ -63,11 +63,47 @@ export class MenuItemsComponent implements OnInit {
         response => {
           console.log(this.userId);
           console.log(menuItem)
-          alert('Item added to cart successfully')
+          // alert('Item added to cart successfully')
+          const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">Hurry!</span>',
+  html: '<span style="color:whitesmoke;">Item added to cart Successfully</span>',
+  icon: 'info',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        }),
           console.log('Item added to cart successfully', response);
         },
         error => {
-          alert('Error Item added to cart ')
+          // alert('Error Item added to cart ')
+          const style = document.createElement('style');
+          style.innerHTML = `
+            .background-pink{
+              background-color: #A47E3B !important; /* Baby pink color */
+            }
+          `;
+          
+          document.head.appendChild(style);
+                  Swal.fire({
+                    title: '<span style="color:whitesmoke;">Oops!</span>',
+            html: '<span style="color:whitesmoke;">Error in adding Item</span>',
+            icon: 'error',
+            confirmButtonColor: '#61481C',
+            customClass:
+            {
+              popup:'background-pink'
+            },
+                  }),
           console.error('Error adding item to cart', error);
         }
       );
