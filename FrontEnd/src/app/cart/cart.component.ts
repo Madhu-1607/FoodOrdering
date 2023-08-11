@@ -162,7 +162,25 @@ export class CartComponent implements OnInit {
     this.http.post<Order>('http://localhost:3000/orders', orderData).subscribe(
       (response) => {
         console.log('Order placed successfully');
-        alert('Order placed successfully');
+        // alert('Order placed successfully');
+        const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">Yummy!</span>',
+  html: '<span style="color:whitesmoke;">Order Placed Succefully</span>',
+  icon: 'success',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        }),
         console.log(response)
             // Update the cart data in the backend
         this.authService.updateCart(this.cart).subscribe(
