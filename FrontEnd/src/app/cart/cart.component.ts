@@ -5,7 +5,7 @@ import { Cart, CartItem } from '../Cart';
 import { CartService } from '../cart.service';
 import { AuthService } from '../auth.service';
 import { MenuItem } from '../MenuItem';
-
+import Swal from 'sweetalert2';
 export interface Order {
   _id: string;
   user: string;
