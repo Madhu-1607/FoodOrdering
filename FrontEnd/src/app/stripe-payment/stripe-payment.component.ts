@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-
+import Swal from 'sweetalert2';
 export interface Cart {
   _id: string;
   user: string;
@@ -91,7 +91,25 @@ export class StripePaymentComponent implements OnInit {
         (response) => {
           // Handle success response
           console.log(response);
-          alert('payment done');
+          // alert('payment done');
+          const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">Hurry!!</span>',
+  html: '<span style="color:whitesmoke;">Payment Done</span>',
+  icon: 'success',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        }),
           this.placeOrder();
 
         },
@@ -115,7 +133,25 @@ export class StripePaymentComponent implements OnInit {
       (response) => {
         console.log(response);
         console.log('Order placed successfully');
-        alert('Order placed successfully');
+        // alert('Order placed successfully');
+        const style = document.createElement('style');
+style.innerHTML = `
+  .background-pink{
+    background-color: #A47E3B !important; /* Baby pink color */
+  }
+`;
+
+document.head.appendChild(style);
+        Swal.fire({
+          title: '<span style="color:whitesmoke;">YEAH!</span>',
+  html: '<span style="color:whitesmoke;">Order Placed Successfully</span>',
+  icon: 'success',
+  confirmButtonColor: '#61481C',
+  customClass:
+  {
+    popup:'background-pink'
+  },
+        }),
         localStorage.setItem('orderId', response._id);
         this.orderId = response._id;
         this.router.navigate(['/orders', this.userId, this.orderId]);
